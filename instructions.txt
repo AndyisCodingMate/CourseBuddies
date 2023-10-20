@@ -1,0 +1,17 @@
+- Server: (for frontend?)
+    - Vercel?(long-term)
+    - **Firebase hosting**
+- Operating System:
+    - **Linux**
+- Database:
+    - **NoSQL**
+- Login:
+    - **Firebase**
+- Frontend:
+    - **Node.js (18.16.0)**
+    - **React.js (18.2.0)**
+    - **NEAR smart contracts (near-sdk-as 3.2.3)**
+- IDE:
+    - VS Code
+        - Prettier
+        - ESlint
