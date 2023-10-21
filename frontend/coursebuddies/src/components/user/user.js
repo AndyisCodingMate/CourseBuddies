@@ -1,20 +1,34 @@
 import React from 'react';
 
-export const name = 'Elon Musk';
-export const id = 17592502;
-export const coursesTaking = ['PHYS 50', 'MATH 32', 'EWRT1A'];
-export const coursesPlanToTake = ['PHYS 1A', 'MATH 1A', 'EWRT 2', 'CIS 22A'];
-export const clubsJoined = ['Le Danza Engineering Community'];
-export const email = 'musk@spacex.com';
-export const password = 'Dogecoinrules1';
+class User {
+    constructor(name, id, coursesTaking, coursesPlanToTake, clubsJoined) {
+        this.name = name;
+        this.id = id;
+        this.coursesTaking = coursesTaking;
+        this.coursesPlanToTake = coursesPlanToTake;
+        this.clubsJoined = clubsJoined;
+    }
 
-const User = () => {
+    greet() {
+        console.log(`Hello, my name is ${this.name} and my ID is ${this.id}.`);
+    }
+}
 
+const coursesTaking = ['PHYS 50', 'MATH 32', 'EWRT1A'];
+const coursesPlanToTake = ['PHYS 1A', 'MATH 1A', 'EWRT 2', 'CIS 22A'];
+const clubsJoined = ['Le Danza Engineering Community'];
+
+const user = new User('Elon Musk', 17592502, coursesTaking, coursesPlanToTake, clubsJoined);
+user.greet();
+
+const UserComponent = () => {
     return (
         <div>
-            Welcome, {name}!
+            <p>Name: {user.name}</p>
+            <p>ID: {user.id}</p>
         </div>
     );
 };
 
-export default User;
+export default UserComponent;
+
