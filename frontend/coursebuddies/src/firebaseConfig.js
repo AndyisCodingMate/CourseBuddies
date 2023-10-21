@@ -1,7 +1,8 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import firebase from 'firebase/compat/app';
+import 'firebase/auth';
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+import { getDatabase } from "firebase/database";
+import App from '../public/App';
 
 const firebaseConfig = {  
     apiKey: "AIzaSyBOEodUKiBpVXXl7STHNqx3Y8_rNtUmDcQ",
@@ -10,10 +11,12 @@ const firebaseConfig = {
     storageBucket: "coursebuddies-28099.appspot.com",
     messagingSenderId: "1005785832412",
     appId: "1:1005785832412:web:b90b6d414220bf98520d19",
-    measurementId: "G-0M9KD6YRDS"
+    measurementId: "G-0M9KD6YRDS",
+    databaseURL: "https://coursebuddies-28099-default-rtdb.firebaseio.com/"
 };
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// Initialize Fire
+const database = getDatabase(App);
+initializeApp(firebaseConfig);
 
-export {firebase, app, analytics};
+
+export default firebase;
