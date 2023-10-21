@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { coursesPlanToTake,coursesTaking,clubsJoined } from '../user/user';
 
 const Searchbar= () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filter, setFilter] = useState('all');
 
-  const classes = ['Math', 'Science', 'History'];
-  const clubs = ['Chess', 'Music', 'Dance'];
-  const users = ['John', 'Jane', 'Doe'];
+  const classes = ['MATH1A', 'PHYS4A', 'HIST17A'];
+  const clubs = ['Developers Guild', 'Music Orchestra', 'Dance Club'];
+  const users = ['Tony Stark', 'Steve Jobs', 'Jeff Bezos'];
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
