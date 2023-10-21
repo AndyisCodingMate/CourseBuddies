@@ -11,7 +11,7 @@ const FirebaseUI = () => {
     const uiConfig = {
       callbacks: {
         signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-          // User successfully signed in.
+          // User successfully signed in
           // You can redirect here.
           return true;
         },
